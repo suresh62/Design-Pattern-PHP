@@ -1,0 +1,48 @@
+
+
+Interface are used when there is comman functionality that each one has between class and each implements it differently.
+
+1.Your inheritance hierarchy represents an "is-a" relationship and not a "has-a" relationship.
+
+2.Interfaces are better suited to situations in which your applications require many possibly unrelated object types to provide certain functionality.
+
+3.Interfaces are better in situations in which you do not have to inherit implementation from a base class.
+
+Consider a situation where we have dog and cat they are both animals and consider our application deals with different sounds animals produce.so in that case 
+
+we would have
+
+interface IAnimal {
+	
+	function produceSound()
+}
+
+Class Dog implements IAnimal
+{
+	
+}
+
+Class Cat implements IAnimal
+{
+	
+}
+
+So in client or code where we use this class.
+
+<?php
+
+$animals=array();
+
+function addAnimals(IAnimal animal)
+{
+	$this->animals=animal;
+}
+
+$dog=new Dog();
+$cat=new Cat();
+
+//See here we are passing respective class but we receive IAnimal..
+addAnimals($dog); 
+addAnimals($cat);
+
+?>
