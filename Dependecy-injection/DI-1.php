@@ -24,7 +24,7 @@ class StockItem {
 // Here the stockItem is tigtly coupled..  
 //Disadvantanges
 /*1. If me modify the stockItem class to accept another parameter then we need to change all the calling syntax to change this..
-2. Here the product class knows too much about the stockItem sinc we are passing the parameter to the product creation.
+2. Here the product class knows too much about the stockItem since we are passing the parameter to the product creation.
 3. Unit testing is hard.Since we need to test stockitem before product.*/
 class Product {
   private $stockItem;
