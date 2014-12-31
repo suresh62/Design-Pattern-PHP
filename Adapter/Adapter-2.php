@@ -8,6 +8,12 @@
 5. main or client // consider a situation where all the client code is accessing the function as 
 				  // given by enemyAttacker.Now if we want to change the functionality from 
 				//	enemyTank to enemyRobots we need to rewrite the code and functions names here we can use the enemyRobotAdaper
+
+Other situation can be where the client has used or called all the functions from a class now what we need is we need to 
+change the functionality so we can not create a new class with functionlity and change client so we need a adapter which will
+help us it will implement the interface and use the function and implmenets its own logic but the function signature remains the same.
+
+
 */
 
 
