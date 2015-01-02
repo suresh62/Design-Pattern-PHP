@@ -23,7 +23,7 @@ Class Subtraction implements IStrategy
 }
 
 //This class does not know how the operation is performed it only cares of executing the strategy by
-//getting the appropriate inputs
+//getting the appropriate inputs.
 Class StrategyContext 
 {
 	private $strategy;

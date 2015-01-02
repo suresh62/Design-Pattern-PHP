@@ -52,6 +52,7 @@ class StrategyContext {
             break;
         }
     }
+    //execute strategy...
     public function showBookTitle($book) {
       return $this->strategy->showTitle($book);
     }
@@ -81,6 +82,7 @@ class Book {
 
   $book = new Book('PHP for Cats','Larry Truett');
  
+ //we create strategy based on key..
   $strategyContextC = new StrategyContext('C');
   $strategyContextE = new StrategyContext('E');
   $strategyContextS = new StrategyContext('S');
