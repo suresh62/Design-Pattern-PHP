@@ -21,7 +21,7 @@ class errorObject
 
 /*-----------------------------------------------------------------------------------------------------------------------------*/
 //error writer...
-class logToConsole
+class ConsoleLogger
 {
     private $__errorObject;
     public function __construct($errorObject)
@@ -74,8 +74,10 @@ class logToCSVAdapter extends errorObject
 
 
 //CSV Error Writer
+//This doesn't know about adpaterobject and base error object.
 
-class logToCSV
+
+class CSVLogger
 {
     const CSV_LOCATION = 'log.csv';
     private $__errorObject;
@@ -98,7 +100,7 @@ class logToCSV
 
 $error = new logToCSVAdapter("404:Not Found");
 /** write the error to the csv file **/
-$log = new logToCSV($error);
+$log = new logToCSV($error);//Implemented this object so that we can write 
 $log->write();
 
 

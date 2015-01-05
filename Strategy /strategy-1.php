@@ -4,12 +4,12 @@ We can change the class we want to execute by passing a key or class
 
 Fallowing example by passing key. -->
 
-<? php
+<?php
 
 //Strategies implementation
 interface IStartegy{
 	public function showTitle($bookId)
-}
+};
 
 class StrategyCaps implements StrategyInterface {
     public function showTitle($book_in) {
@@ -17,7 +17,7 @@ class StrategyCaps implements StrategyInterface {
         $this->titleCount++;
         return strtoupper ($title);
     }
-}
+};
 
 class StrategyExclaim implements StrategyInterface {
     public function showTitle($book_in) {
@@ -25,7 +25,7 @@ class StrategyExclaim implements StrategyInterface {
         $this->titleCount++;
         return Str_replace(' ','!',$title);
     }
-}
+};
 
 class StrategyStars implements StrategyInterface {
     public function showTitle($book_in) {
@@ -33,7 +33,7 @@ class StrategyStars implements StrategyInterface {
         $this->titleCount++;
         return Str_replace(' ','*',$title);
     }
-}
+};
 
 
 class StrategyContext {
@@ -56,7 +56,7 @@ class StrategyContext {
     public function showBookTitle($book) {
       return $this->strategy->showTitle($book);
     }
-}
+};
 
 class Book {
     private $author;
@@ -100,6 +100,8 @@ class Book {
   writeln('');
 
   writeln('END TESTING STRATEGY PATTERN');
+
+
 
   function writeln($line_in) {
     echo $line_in."<br/>";
