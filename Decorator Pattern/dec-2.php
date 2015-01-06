@@ -64,11 +64,11 @@ abstarct class IcecreamDecorator implements IIcecream
     protected $_baseIcream;
     public function __construct(IIcecream icecream)
     {
-        $this->$_baseIcream=icecream;
+        $this->$_baseIcecream=icecream;
     }
     public function makeicecream()
     {
-        return $this->$_baseIcream->makeicecream();
+        return $this->$_baseIcecream->makeicecream();
     }
 }
 
@@ -82,7 +82,7 @@ class NuttyDecorator extends IcecreamDecorator
 
    public function makeicecream()
     {
-        echo $this->$_BaseIcecream->makeicecream() + $this->addNuts();
+        echo $this->$_baseIcecream->makeicecream() + $this->addNuts();
     }
     public function addNuts()
     {
@@ -98,7 +98,7 @@ class HoneyDecorator extends IcecreamDecorator
 
     public function makeicecream()
     {
-        echo $this->$_BaseIcecream->makeicecream() + $this->addHoney();
+        echo $this->$_baseIcecream->makeicecream() + $this->addHoney();
     }
     public function addHoney()
     {

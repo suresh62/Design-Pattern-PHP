@@ -17,7 +17,7 @@ Class Addition implements IStrategy
 Class Subtraction implements IStrategy
 {
 	public doOperation($num1,$num2)
-	{
+	{        
 		return $num1-$num2;
 	}
 }

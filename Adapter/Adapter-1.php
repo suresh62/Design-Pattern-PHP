@@ -100,7 +100,7 @@ class CSVLogger
 
 $error = new logToCSVAdapter("404:Not Found");
 /** write the error to the csv file **/
-$log = new logToCSV($error);//Implemented this object so that we can write 
+$log = new logToCSV($error);//Implemented this object so that we can write all error to csv format.
 $log->write();
 
 
