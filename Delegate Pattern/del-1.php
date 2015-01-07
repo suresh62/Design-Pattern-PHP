@@ -105,7 +105,8 @@ class plsPlaylistDelegate
 
 
 //Here we pass the type and based on type the object is created and method is class 
-//all the delegated class should have the same method signatures.
+//all the delegated class should have the same method signatures.Here in the above example 
+//the logic for each function is small but when we have complex logics we can use seperate object for doing a task.
 $externalRetrievedType = 'pls';
 $playlist = new newPlaylist($externalRetrievedType);
 $playlistContent = $playlist->getPlaylist();
